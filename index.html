@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tribute to Dr. A.P.J. Abdul Kalam</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark">
+
+  <!-- ✨ Particles Background -->
+  <div id="particles-js"></div>
+
+  <!-- ⚡ Preloader -->
+  <div id="preloader">
+    <div class="preloader-text">Tribute to Dr. Kalam 🚀</div>
+  </div>
+
+  <!-- 🌗 Theme Toggle -->
+  <div class="theme-toggle">
+    <label for="themeSelector">Theme:</label>
+    <select id="themeSelector" onchange="changeTheme()">
+      <option value="dark">Dark</option>
+      <option value="galaxy">Galaxy</option>
+    </select>
+  </div>
+
+  <div class="container">
+    <header>
+      <h1>Dr. A.P.J. Abdul Kalam</h1>
+      <p class="subtitle typewriter">Missile Man of India</p>
+      <button id="musicBtn">Play Music 🎵</button>
+    </header>
+
+    <!-- 👨‍🚀 About Section -->
+    <section class="about-kalam">
+      <h2>About Dr. A.P.J. Abdul Kalam</h2>
+      <p>
+        Dr. Avul Pakir Jainulabdeen Abdul Kalam, affectionately known as the "Missile Man of India," was born on 15 October 1931 in Rameswaram, Tamil Nadu. He was a renowned aerospace scientist who played a crucial role in India's civilian space program and military missile development efforts.
+      </p>
+      <p>
+        He significantly contributed to India's success in satellite launch vehicles, ballistic missiles, and nuclear capabilities. His leadership in the Pokhran-II tests and work at ISRO and DRDO earned him the Bharat Ratna, India's highest civilian award.
+      </p>
+      <p>
+        Dr. Kalam served as the 11th President of India (2002–2007), and was widely respected for his humility, wisdom, and integrity. A lifelong advocate of youth empowerment, he remained active in education and public speaking until his passing in 2015, leaving behind a legacy of inspiration.
+      </p>
+    </section>
+
+    <section class="image-section">
+      <img src="assets/images/kalam.jpg" alt="Dr. Kalam">
+    </section>
+
+    <section class="life-events">
+      <h2>Timeline of Life Events</h2>
+      <ul>
+        <li><strong>1931:</strong> Born in Rameswaram, Tamil Nadu</li>
+        <li><strong>1980:</strong> Led India’s first Satellite Launch Vehicle mission</li>
+        <li><strong>1998:</strong> Played a key role in Pokhran-II nuclear tests</li>
+        <li><strong>2002–2007:</strong> Served as the 11th President of India</li>
+        <li><strong>2015:</strong> Passed away while delivering a lecture at IIM Shillong</li>
+      </ul>
+    </section>
+
+    <section class="vision-2020">
+      <h2>Kalam’s Vision 2020</h2>
+      <p>Dr. Kalam envisioned a developed India powered by technological advancement, self-sufficiency, and youth empowerment. Vision 2020 includes goals for education, healthcare, infrastructure, and digital progress.</p>
+    </section>
+
+    <section class="quotes-carousel">
+      <h2>Famous Quotes</h2>
+      <div class="quote-box" id="quoteBox">
+        "You have to dream before your dreams can come true."
+      </div>
+      <button onclick="nextQuote()">Next Quote</button>
+    </section>
+
+    <section class="key-points">
+      <div class="point-card">A visionary scientist and aerospace engineer</div>
+      <div class="point-card">Known for humility, simplicity, and patriotism</div>
+      <div class="point-card">Inspired millions through speeches and books</div>
+      <div class="point-card">Advocate of education and innovation</div>
+    </section>
+
+    <!-- 📚 Dr. Kalam’s Books -->
+    <section class="books-section">
+      <h2>📚 Dr. Kalam’s Books</h2>
+      <div class="books-grid">
+        <div class="book-card">
+          <img src="https://m.media-amazon.com/images/I/71URyfhgE7L._SY466_.jpg" alt="Wings of Fire">
+          <h3>Wings of Fire</h3>
+          <p>An autobiography of Dr. Kalam, tracing his journey from a small town to the presidency.</p>
+        </div>
+        <div class="book-card">
+          <img src="https://m.media-amazon.com/images/I/81d+S8bA1KL._SY466_.jpg" alt="Ignited Minds">
+          <h3>Ignited Minds</h3>
+          <p>Focuses on youth, education, and India's potential to become a superpower.</p>
+        </div>
+        <div class="book-card">
+          <img src="https://m.media-amazon.com/images/I/71Z9Su+k9cL._SY466_.jpg" alt="India 2020">
+          <h3>India 2020</h3>
+          <p>Visionary roadmap for transforming India into a developed nation by 2020.</p>
+        </div>
+        <div class="book-card">
+          <img src="https://m.media-amazon.com/images/I/81IieHWWy7L._SY466_.jpg" alt="My Journey">
+          <h3>My Journey</h3>
+          <p>Collection of inspiring stories and life lessons from Dr. Kalam's childhood and career.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 💡 Did You Know -->
+    <section class="did-you-know">
+      <h2>💡 Did You Know?</h2>
+      <p id="factBox">Click below to discover interesting facts about Dr. Kalam!</p>
+      <button onclick="showRandomFact()">Show Fact</button>
+    </section>
+
+    <!-- 🌟 Messages to Youth -->
+    <section class="messages-to-youth">
+      <h2>🌟 Messages to Youth</h2>
+      <ul>
+        <li>“Dream, dream, dream. Dreams transform into thoughts and thoughts result in action.”</li>
+        <li>“You have to dream before your dreams can come true.”</li>
+        <li>“Confidence and hard work is the best medicine to kill the disease called failure.”</li>
+        <li>“Don’t read success stories, you will only get a message. Read failure stories, you will get some ideas.”</li>
+        <li>“The best brains of the nation may be found on the last benches of the classroom.”</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>Made with ❤️ in memory of Dr. Kalam</p>
+    </footer>
+  </div>
+
+  <!-- 🎵 Audio -->
+  <audio id="bgMusic" src="assets/audio/kalam_speech.mp3" loop></audio>
+
+  <!-- 📜 Scripts -->
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+  particlesJS("particles-js", {
+    particles: {
+      number: {
+        value: 100,
+        density: { enable: true, value_area: 800 }
+      },
+      color: { value: "#ffffff" },
+      shape: {
+        type: ["circle", "image", "star"], // support star and rocket image
+        image: {
+          src: "https://cdn-icons-png.flaticon.com/512/3219/3219358.png", // 🧨 rocket icon
+          width: 32,
+          height: 32
+        }
+      },
+      opacity: {
+        value: 0.8,
+        random: true,
+        anim: { enable: true, speed: 0.5, opacity_min: 0.2, sync: false }
+      },
+      size: {
+        value: 4,
+        random: true,
+        anim: { enable: false }
+      },
+      line_linked: {
+        enable: false
+      },
+      move: {
+        enable: true,
+        speed: 2,
+        direction: "top",
+        out_mode: "out",
+        bounce: false
+      }
+    },
+    interactivity: {
+      events: {
+        onhover: { enable: true, mode: "repulse" },
+        onclick: { enable: true, mode: "push" },
+        resize: true
+      },
+      modes: {
+        repulse: { distance: 100, duration: 0.4 },
+        push: { particles_nb: 4 }
+      }
+    },
+    retina_detect: true
+  });
+</script>
+</body>
+</html>
